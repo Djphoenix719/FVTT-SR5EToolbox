@@ -1,0 +1,17 @@
+{
+    "name": "sr5e-toolbox",
+    "title": "SR5E Toolbox",
+    "description": "A collection of utilities I made mostly for myself, but may be useful to others to run games in SR5E.",
+    "version": "0.0.1",
+    "author": "Andrew Cuccinello [DJ#1982]",
+    "packs": [],
+    "esmodules": ["./bundle.js"],
+    "styles": ["./bundle.css"],
+    "socket": true,
+    "systems": ["sr5e"],
+    "compatibleCoreVersion": "0.7.9",
+    "minimumCoreVersion": "0.6.6",
+    "manifest": "https://raw.githubusercontent.com/Djphoenix719/FVTT-SR5EToolbox/master/module.json",
+    "download": "",
+    "url": "https://github.com/Djphoenix719/FVTT-SR5EToolbox"
+}
