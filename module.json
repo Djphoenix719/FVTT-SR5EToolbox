@@ -8,7 +8,7 @@
     "esmodules": ["./bundle.js"],
     "styles": ["./bundle.css"],
     "socket": true,
-    "systems": ["sr5e"],
+    "systems": ["shadowrun5e"],
     "compatibleCoreVersion": "0.7.9",
     "minimumCoreVersion": "0.6.6",
     "manifest": "https://raw.githubusercontent.com/Djphoenix719/FVTT-SR5EToolbox/master/module.json",

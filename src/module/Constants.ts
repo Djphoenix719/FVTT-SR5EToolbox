@@ -13,4 +13,4 @@
  * limitations under the License.
  */
 
-@import "settings-app/main";
+export const MODULE_NAME = `sr5e-toolbox`;
