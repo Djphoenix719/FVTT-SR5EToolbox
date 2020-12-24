@@ -9,6 +9,7 @@ Hooks.on('setup', async () => {
 });
 
 Hooks.on('ready', extendActorSheet);
+Hooks.on('ready', () => setTimeout(() => game.actors.getName('Test Vendor')?.sheet.render(true), 1000));
 
 window['ALIGN_MAP'] = async () => {
     let basePath = 'artwork/Scifi/Maps/Seattle/';

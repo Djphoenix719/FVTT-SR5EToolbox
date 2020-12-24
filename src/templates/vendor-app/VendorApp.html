@@ -1,29 +1,14 @@
-<form>
-    <h1>Test!</h1>
-    {{#> 'systems/shadowrun5e/dist/templates/common/TabWrapper.html' tabId='gear'}}
-        <div class="inventory">
-            <div class="scroll-area">
-                {{#each inventory as |section sid|}}
-                    {{> 'systems/shadowrun5e/dist/templates/common/List/ListHeader.html'
-                            name=(localize section.label)
-                            itemId=section.dataset.type
-                            icons=(ItemHeaderIcons section.dataset.type)
-                            rightSide=(ItemHeaderRightSide section.dataset.type)
-                    }}
-                    {{#each section.items as |item i|}}
-                        {{> 'systems/shadowrun5e/dist/templates/common/List/ListItem.html'
-                                img=item.img
-                                name=item.name
-                                itemId=item._id
-                                icons=(ItemIcons item)
-                                rightSide=(ItemRightSide item)
-                                hasDesc="true"
-                                hasRoll="true"
-                                description=item.data.description.value
-                        }}
-                    {{/each}}
-                {{/each}}
-            </div>
+<form class="vendor-app {{cssClass}}">
+    {{#if editable}}
+        <div class="stock-settings">
+            <h3>Refresh Stock</h3>
         </div>
-    {{/'systems/shadowrun5e/dist/templates/common/TabWrapper.html'}}
+    {{/if}}
+    <div class="inventory">
+        <div class="scroll-area">
+            {{#each stock as |item|}}
+                {{> modules/sr5e-toolbox/templates/vendor-app/VendorItem.html item=item editable=../editable }}
+            {{/each}}
+        </div>
+    </div>
 </form>

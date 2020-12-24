@@ -1,0 +1,23 @@
+form.vendor-app {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+
+    div.stock-settings {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 4px;
+    }
+
+    div.inventory {
+        border: black 1px solid;
+        flex: 1;
+
+        div.scroll-area {
+            overflow-y: auto;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+}

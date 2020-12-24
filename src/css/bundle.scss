@@ -13,4 +13,9 @@
  * limitations under the License.
  */
 
-@import "settings-app/main";
+@import 'settings-app/main';
+@import 'vendor-app/main';
+
+div.sr5e-toolbox input {
+    color: white;
+}

@@ -69,12 +69,12 @@ const ATTR_REOPEN_SHEET_REQUIRED: IFeatureAttribute = {
     title: 'Sheets must be closed and re-opened.',
 };
 
-export const FEATURES: IFeatureDefinition[] = [
-
-];
+export const FEATURES: IFeatureDefinition[] = [];
 
 export default class Settings {
     public static readonly FEATURES = Features;
+
+    public static readonly CSS_CLASSES = ['sr5e-toolbox', 'vendor-app', 'sr5'];
 
     public static get<T = any>(key: string): T {
         return game.settings.get(MODULE_NAME, key) as T;

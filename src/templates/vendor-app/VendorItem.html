@@ -1,0 +1,48 @@
+<div class="list-item" data-item-id="{{item._id}}">
+    <div class="item-left">
+        <div class="item-text item-name">{{item.name}}</div>
+    </div>
+
+    <div class="item-right">
+
+        <div class="item-text">
+            <label>Stock</label>
+            <input class="display quantity" type="number" value="{{item.data.technology.quantity}}" data-dtype="Number" min="0">
+        </div>
+        <div class="item-text">
+            <label>Price</label>
+            <input class="display cost" type="number" value="{{item.data.technology.cost}}" data-dtype="Number" min="0">
+        </div>
+
+        <div class="item-text">
+            <label>Avail.</label>
+            <p>{{item.data.technology.availability}}</p>
+        </div>
+        <div class="item-text">
+            <label>Rating</label>
+            {{#if item.data.technology.rating}}
+                <p>{{item.data.technology.rating}}</p>
+            {{else}}
+                <p>N/A</p>
+            {{/if}}
+        </div>
+
+        <div class="item-text item-icons">
+            <a class="roll purchase" title="Purchase">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a class="roll open-pdf" title="{{localize 'SR5.OpenSourcePdf'}}">
+                <i class="fas fa-file open-source-pdf"></i>
+            </a>
+
+            {{#if editable}}
+                <a class="roll edit-item" title="{{localize 'SR5.EditItem'}}">
+                    <i class="fas fa-edit item-edit"></i>
+                </a>
+                <a class="roll delete-item" title="{{localize 'SR5.DeleteItem'}}">
+                    <i class="fas fa-trash item-delete"></i>
+                </a>
+            {{/if}}
+        </div>
+    </div>
+</div>
