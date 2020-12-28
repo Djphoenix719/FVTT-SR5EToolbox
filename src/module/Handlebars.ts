@@ -8,6 +8,7 @@ export async function registerHandlebarsTemplates() {
         `modules/${MODULE_NAME}/templates/settings-app/tabs/Features.html`,
         `modules/${MODULE_NAME}/templates/settings-app/tabs/License.html`,
 
+        `modules/${MODULE_NAME}/templates/vendor-app/StockSettingsApp.html`,
         `modules/${MODULE_NAME}/templates/vendor-app/VendorItem.html`,
     ];
     await loadTemplates(templatePaths);

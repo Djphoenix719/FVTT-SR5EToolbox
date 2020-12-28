@@ -1,9 +1,4 @@
 <form class="vendor-app {{cssClass}}">
-    {{#if editable}}
-        <div class="stock-settings">
-            <h3>Refresh Stock</h3>
-        </div>
-    {{/if}}
     <div class="inventory">
         <div class="scroll-area">
             {{#each stock as |item|}}
@@ -11,4 +6,10 @@
             {{/each}}
         </div>
     </div>
+    {{#if editable}}
+        <div class="stock-settings">
+            <button id="refresh-stock">Refresh Stock</button>
+            <button id="clear-stock">Clear Stock</button>
+        </div>
+    {{/if}}
 </form>

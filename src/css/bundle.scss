@@ -19,3 +19,22 @@
 div.sr5e-toolbox input {
     color: white;
 }
+ol.directory-list {
+    h4.entity-name {
+        flex-grow: 1;
+    }
+    span.pdf-source {
+        flex: 0;
+        flex-shrink: 1;
+        white-space: nowrap;
+
+        background: rgba(255, 255, 255, 0.05);
+
+        cursor: pointer;
+    }
+}
+.sidebar-tab .directory-list .directory-item h3,
+.sidebar-tab .directory-list .directory-item h4 {
+    text-overflow: ellipsis;
+    padding-right: 4px;
+}

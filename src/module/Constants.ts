@@ -14,3 +14,4 @@
  */
 
 export const MODULE_NAME = `sr5e-toolbox`;
+export const STOCK_SETTINGS = `stockSettings`;

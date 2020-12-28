@@ -21,3 +21,11 @@ form.vendor-app {
         margin: 0;
     }
 }
+
+table tr.list-item {
+    display: table-row !important;
+}
+
+input.transparent {
+    background: transparent;
+}

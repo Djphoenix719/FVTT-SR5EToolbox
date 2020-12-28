@@ -11,7 +11,7 @@ export function getItemId(html: JQuery | HTMLElement): string | undefined {
     const dataId: string | undefined = html.data('item-id');
     if (dataId) return dataId;
 
-    const parent = html.closest('div.list-item');
+    const parent = html.closest('.list-item');
     if (parent) return parent.data('item-id');
     else return undefined;
 }
@@ -30,4 +30,28 @@ export function getQuantityAmount(event: JQuery.Event, baseAmount: number = 1): 
     if (event.altKey) amount *= 100;
 
     return amount;
+}
+
+/**
+ * Get a random value between the minimum and maximum
+ * @param min Minimum (inclusive)
+ * @param max Maximum (exclusive)
+ */
+export function rollMinMax(min: number, max: number): number {
+    return min + Math.floor(Math.random() * (max - min));
+}
+
+export interface DropData {
+    type: string;
+    id: string;
+}
+export interface StockSetting {
+    id: string;
+    name: string;
+    probability: number;
+    minimum: number;
+    maximum: number;
+}
+export interface StockSettings {
+    [key: string]: StockSetting;
 }
